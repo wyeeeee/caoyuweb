@@ -16,6 +16,20 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/QQbot',
+    component: () => import('@/layouts/qqbot/QQbot.vue'),
+    children: [
+      {
+        path: 'bilibili',
+        component: () => import(/* webpackChunkName: "home" */ '@/layouts/qqbot/bilibili.vue'),
+      },
+      {
+        path: 'gcores',
+        component: () => import(/* webpackChunkName: "home" */ '@/layouts/qqbot/gcores.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
