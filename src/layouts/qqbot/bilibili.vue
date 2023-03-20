@@ -1,7 +1,7 @@
 <template>
   <div class="  d-flex align-content-start flex-wrap mt-5">
   <v-responsive max-width="400px" min-width="400px">
-  <div class=" ml-12 d-flex justify-start mb-1 ">
+  <div class=" ml-9 d-flex justify-start mb-1 ">
     <v-responsive
     
         >
@@ -10,6 +10,7 @@
         label="开启推送"
         color="primary"
         value="1"
+        class="pl-3"
         hide-details
       ></v-switch>
         </v-responsive>
@@ -58,6 +59,7 @@
           <v-text-field
             label="屏蔽词(逗号分隔)"
             hide-details="auto"
+            clearable
             variant="underlined"
             hint="含有含有屏蔽词的稿件将不会被推送"
           ></v-text-field>
@@ -66,12 +68,19 @@
   <v-divider vertical class="ml-12"></v-divider>
   <v-responsive max-width="600px" min-width="400px">
 <div class="text-h6 ml-3">服务器监控</div>
-<v-textarea  class="text-h6 ml-3" label="这里是监控内容，应该有更好看的方案" variant="underlined"></v-textarea>
+<v-textarea  class="text-h6 ml-3" label="这里是监控内容，应该有更好看的方案" variant="outlined"></v-textarea>
 
 </v-responsive>
 </div>
 
-    <v-divider class="mt-5"></v-divider>
+    <v-divider class="mt-5 mb-5"></v-divider>
+    <v-responsive
+          class="ml-6"
+          max-width="344"
+        >
+        <v-text-field clearable label="搜索" variant="underlined"></v-text-field>
+  </v-responsive>
+
     <div class="d-flex align-content-start flex-wrap" >
     
     <v-dialog
@@ -85,7 +94,7 @@
         width="280"
         height="230"
         v-bind="props"
-        style="margin-top: 50px;"
+        style="margin-top: 30px;"
       >
       <v-img
           src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -98,7 +107,7 @@
           </v-card-title>
         </v-img>
         
-    
+        
         <v-card-text>
           最新一期的标题
         </v-card-text>
@@ -130,6 +139,7 @@
     class="mx-auto"
     v-for="i in 10"></div>
   </div>
+  <v-pagination :length="4"></v-pagination>
 </template>
 
 <script setup>

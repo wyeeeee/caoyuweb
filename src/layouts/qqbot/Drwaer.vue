@@ -13,7 +13,9 @@
         <template v-slot:prepend>
             <v-avatar :image="item.avatar" rounded="0"></v-avatar>
           </template>
+          
         </v-list-item>
+        
       </v-list>
 </template>
 
