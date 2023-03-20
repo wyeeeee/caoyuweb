@@ -1,7 +1,9 @@
 <template>
-  <div class=" ml-12 d-flex justify-start mb-6 ">
+  <div class="  d-flex align-content-start flex-wrap mt-5">
+  <v-responsive max-width="400px" min-width="400px">
+  <div class=" ml-12 d-flex justify-start mb-1 ">
     <v-responsive
-          max-width="150"
+    
         >
         <v-switch
         v-model="ex11"
@@ -15,8 +17,41 @@
             <v-btn class="align-self-center" variant="outlined"  color="primary">
               新增订阅
             </v-btn>
-          </div>
-          <v-responsive
+  </div>
+
+
+
+    <v-responsive
+          max-width="390"
+          class="ml-6"
+          thumb-label>
+          <div class="text-caption ml-6" style="position: absolute;top: 5px;">自动更新时间</div>
+          <v-slider
+        v-model="value"
+          :min="10"
+          :max="60"
+          :step="10"
+          class="mx-auto pt-3 pb-3 pl-6 pr-6"
+          hide-details>
+          <template v-slot:append>
+            <v-text-field
+              v-model="value"
+              hide-details
+              single-line
+              density="compact"
+              type="number"
+              variant="underlined"
+              style="width: 70px"
+            ></v-text-field>
+          </template>
+        </v-slider>
+        
+    </v-responsive>
+    
+
+
+
+    <v-responsive
           class="ml-12"
           max-width="344"
         >
@@ -24,9 +59,19 @@
             label="屏蔽词(逗号分隔)"
             hide-details="auto"
             variant="underlined"
+            hint="含有含有屏蔽词的稿件将不会被推送"
           ></v-text-field>
-        </v-responsive>
-          <v-divider class="mt-5"></v-divider>
+    </v-responsive>
+  </v-responsive>
+  <v-divider vertical class="ml-12"></v-divider>
+  <v-responsive max-width="600px" min-width="400px">
+<div class="text-h6 ml-3">服务器监控</div>
+<v-textarea  class="text-h6 ml-3" label="这里是监控内容，应该有更好看的方案" variant="underlined"></v-textarea>
+
+</v-responsive>
+</div>
+
+    <v-divider class="mt-5"></v-divider>
     <div class="d-flex align-content-start flex-wrap" >
     
     <v-dialog
@@ -91,6 +136,7 @@
 import { ref } from 'vue'
 const data=ref(11);
 const ex11=ref(11);
+const value=ref(60);
 const dialog=ref(null);
 const linenuber=ref()
 
