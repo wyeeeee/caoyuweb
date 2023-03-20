@@ -22,7 +22,7 @@
    import bilibili from '@/assets/bilibili.png'
    import gcores from '@/assets/gcores.png'
    import router from '@/router/index.js'
-   const items=[{'title':'bilibili弹幕网','avatar':bilibili,'subtitle':'你所热爱的，_____!','link':'bilibili'},
+   const items=[{'title':'bilibili弹幕网','avatar':bilibili,'subtitle':'你所热爱的,就是你的生活','link':'bilibili'},
    {'title':'机核','avatar':gcores,'subtitle':'不止游戏','link':'gcores'}]
    const c=ref(null);
    router.push('/QQbot/bilibili')
