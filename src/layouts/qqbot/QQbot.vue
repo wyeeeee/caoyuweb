@@ -7,16 +7,16 @@
         <v-app-bar color="white" >
           <v-app-bar-nav-icon color="black" @click="drawer = !drawer"></v-app-bar-nav-icon>
           <v-responsive
-          class="ml-6"
-          max-width="200">
-          <v-toolbar-title >赛博曹宇QQBot</v-toolbar-title>
+          class="ml-6 d-none d-sm-flex"
+          max-width="150">
+          <v-toolbar-title class="" >赛博曹宇QQBot</v-toolbar-title>
           </v-responsive>
           <v-responsive
           class="ml-6"
           max-width="344">
         <v-text-field clearable
         density="compact"
-         class="pt-3 " 
+         class="pt-3 mx-auto" 
          label="搜索"
           variant="outlined"
          append-inner-icon="mdi-magnify" @click:append-inner="onClick"></v-text-field>
