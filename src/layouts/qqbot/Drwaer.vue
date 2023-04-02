@@ -1,13 +1,15 @@
 <template>
-    <v-card title="赛博曹宇" subtitle="" style='text-align: center;'></v-card>
+  
+    <div class="mx-auto text-h6 mt-0 mb-0 pt-4 pb-4"  style='text-align: center;' >赛博曹宇</div>
     <v-list lines="two" style='text-align: center;'>
-        <v-list-subheader>订阅源</v-list-subheader>
+      <v-list-item><v-list-subheader>订阅源</v-list-subheader></v-list-item>
+        
         <v-list-item
           v-for="item in items"
           :key="item.title"
           :title="item.title"
           :subtitle="item.subtitle"
-          @click="router.push('/QQbot/'+item.link)"
+          @click="goto(item.link)"
         >
             
         <template v-slot:prepend>
@@ -17,6 +19,7 @@
         </v-list-item>
         
       </v-list>
+      
 </template>
 
 <script setup>
@@ -26,6 +29,9 @@
    import router from '@/router/index.js'
    const items=[{'title':'bilibili弹幕网','avatar':bilibili,'subtitle':'你所热爱的,就是你的生活','link':'bilibili'},
    {'title':'机核','avatar':gcores,'subtitle':'不止游戏','link':'gcores'}]
-   const c=ref(null);
-   router.push('/QQbot/bilibili')
+   function goto(url){
+    router.push('/QQbot/'+url);
+    console.log(url);
+   }
+
 </script>

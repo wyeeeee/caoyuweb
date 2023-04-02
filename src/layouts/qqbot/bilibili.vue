@@ -1,6 +1,21 @@
 <template>
+  <!--
+  <v-responsive
+  class="ml-6"
+  max-width="344"
+>
+<v-text-field clearable
+density="compact"
+ class="pt-3 " 
+ label="搜索"
+  variant="outlined"
+ append-inner-icon="mdi-magnify" @click:append-inner="onClick"></v-text-field>
+</v-responsive>
+-->
   <div class="  d-flex align-content-start flex-wrap mt-5">
+    
   <v-responsive max-width="400px" min-width="400px">
+    
   <div class=" ml-9 d-flex justify-start mb-1 ">
     <v-responsive
     
@@ -65,7 +80,6 @@
           ></v-text-field>
     </v-responsive>
   </v-responsive>
-  <v-divider vertical class="ml-12"></v-divider>
   <v-responsive max-width="600px" min-width="400px">
 <div class="text-h6 ml-3">服务器监控</div>
 <v-textarea  class="text-h6 ml-3" label="这里是监控内容，应该有更好看的方案" variant="outlined"></v-textarea>
@@ -73,13 +87,7 @@
 </v-responsive>
 </div>
 
-    <v-divider class="mt-5 mb-5"></v-divider>
-    <v-responsive
-          class="ml-6"
-          max-width="344"
-        >
-        <v-text-field clearable label="搜索" variant="underlined"></v-text-field>
-  </v-responsive>
+
 
     <div class="d-flex align-content-start flex-wrap" >
     
@@ -91,8 +99,8 @@
       <template v-slot:activator="{ props }">
         <v-card
         class="mx-auto rounded-lg"
-        width="280"
-        height="230"
+        width="300"
+        height="240"
         v-bind="props"
         style="margin-top: 30px;"
       >
@@ -135,7 +143,7 @@
 
     
     <div 
-    style="height: 0px;width: 280px;"
+    style="height: 0px;width: 300px;"
     class="mx-auto"
     v-for="i in 10"></div>
   </div>
@@ -148,8 +156,10 @@ const data=ref(11);
 const ex11=ref(11);
 const value=ref(60);
 const dialog=ref(null);
-const linenuber=ref()
+const linenuber=ref(null);
 
-
+function onClick(){
+  alert("ss")
+}
 
 </script>
